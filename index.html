@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haotian Xu - Researcher</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">H. Xu</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about">About</a></li>
+                <li><a href="#highlights">Highlights</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#zhihu">Zhihu</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">Haotian Xu <span class="hero-cn">许皓天</span></h1>
+                <p class="hero-tagline">RL-Infra &amp; RL Algorithms &middot; Agentic-RL</p>
+                <p class="hero-affiliation"><i class="fas fa-building"></i> MiroMind</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">1,500+</span>
+                        <span class="stat-label">Citations</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">14</span>
+                        <span class="stat-label">h-index</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">8+</span>
+                        <span class="stat-label">Top Venues</span>
+                    </div>
+                </div>
+                <div class="hero-links">
+                    <a href="https://scholar.google.com/citations?user=WTocGYAAAAAJ&hl=en" target="_blank" class="btn btn-primary"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+                    <a href="https://www.zhihu.com/people/hao-tian-87/posts" target="_blank" class="btn btn-secondary"><i class="fab fa-zhihu"></i> Zhihu</a>
+                    <a href="https://github.com/OpenRLHF" target="_blank" class="btn btn-secondary"><i class="fab fa-github"></i> GitHub</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="avatar-ring">
+                    <div class="avatar-placeholder">
+                        <i class="fas fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I currently work at <strong>MiroMind</strong>, focusing on <strong>RL-Infra</strong> and <strong>RL algorithm</strong> development with a focus on <strong>Agentic-RL</strong>. I contributed the <strong>fully-async</strong> scheduling architecture to <strong>OpenRLHF</strong>, an open-source, Ray-based high-performance RLHF framework widely adopted by the community. My research spans LLM reasoning, MCTS, scaling laws for agentic reasoning, and efficient reasoning compression.</p>
+                </div>
+                <div class="about-interests">
+                    <h3>Research Interests</h3>
+                    <div class="interest-tags">
+                        <span class="tag">RL-Infra</span>
+                        <span class="tag">Agentic-RL</span>
+                        <span class="tag">LLM Reasoning</span>
+                        <span class="tag">MCTS</span>
+                        <span class="tag">RLHF</span>
+                        <span class="tag">Scaling Laws</span>
+                        <span class="tag">NLP</span>
+                        <span class="tag">LLM Safety</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Work Experience Timeline -->
+            <h3 class="timeline-title">Work Experience</h3>
+            <div class="timeline">
+                <div class="timeline-item current">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025.11 &ndash; Present</div>
+                    <div class="timeline-body">
+                        <h4>MiroMind</h4>
+                        <p>RL-Infra &amp; RL Algorithms (Agentic-RL)</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025.9 &ndash; 2025.11</div>
+                    <div class="timeline-body">
+                        <h4>Quark (夸克) &mdash; Base Model Team</h4>
+                        <p>Search-RL</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024 &ndash; 2025.8</div>
+                    <div class="timeline-body">
+                        <h4>Xiaohongshu (小红书) &mdash; HiLab</h4>
+                        <p>Math-Reasoning &amp; Agentic-RL</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023</div>
+                    <div class="timeline-body">
+                        <h4>Douyin (抖音 / ByteDance)</h4>
+                        <p>AIGC Safety</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2018 &ndash; 2023</div>
+                    <div class="timeline-body">
+                        <h4>Alibaba (阿里巴巴)</h4>
+                        <p>Content Safety, Public Opinion Analysis, Personal Privacy, LLM Safety</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education -->
+            <h3 class="timeline-title">Education</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2013 &ndash; 2016</div>
+                    <div class="timeline-body">
+                        <h4>Tsinghua University (清华大学)</h4>
+                        <p>Department of Electronic Engineering</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2009 &ndash; 2013</div>
+                    <div class="timeline-body">
+                        <h4>UESTC (电子科技大学)</h4>
+                        <p>Bachelor's Degree</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section class="section section-alt" id="highlights">
+        <div class="container">
+            <h2 class="section-title">2025 Highlights</h2>
+            <p class="section-subtitle">Top-venue publications accepted in 2025&ndash;2026</p>
+            <div class="highlights-grid">
+
+                <div class="highlight-card spotlight">
+                    <div class="card-badge">NeurIPS 2025</div>
+                    <div class="card-citations"><i class="fas fa-quote-right"></i> 45 citations</div>
+                    <h3>Agentic RL Scaling Law: Spontaneous Code Execution for Mathematical Problem Solving</h3>
+                    <p class="card-authors">X Mai, <strong>H Xu</strong>, W Wang, Y Zhang, W Zhang</p>
+                    <p class="card-desc">Discovering scaling laws for agentic reinforcement learning where LLMs spontaneously learn to execute code for mathematical reasoning.</p>
+                </div>
+
+                <div class="highlight-card spotlight">
+                    <div class="card-badge">ICLR 2026</div>
+                    <div class="card-citations"><i class="fas fa-quote-right"></i> 17 citations</div>
+                    <h3>IterResearch: Rethinking Long-Horizon Agents with Interaction Scaling</h3>
+                    <p class="card-authors">G Chen, Z Qiao, X Chen, D Yu, <strong>H Xu</strong>, WX Zhao, R Song, W Yin, H Yin, et al.</p>
+                    <p class="card-desc">Rethinking how to scale agent interactions for long-horizon research tasks.</p>
+                </div>
+
+                <div class="highlight-card spotlight">
+                    <div class="card-badge">ICLR 2026</div>
+                    <div class="card-citations"><i class="fas fa-quote-right"></i> 11 citations</div>
+                    <h3>GEM: A Gym for Generalist LLMs</h3>
+                    <p class="card-authors">Z Liu, A Sims, K Duan, C Chen, S Yu, X Zhou, <strong>H Xu</strong>, S Xiong, B Liu, C Tan, et al.</p>
+                    <p class="card-desc">A comprehensive gym environment for training and evaluating generalist large language models.</p>
+                </div>
+
+                <div class="highlight-card spotlight">
+                    <div class="card-badge">ICLR 2026</div>
+                    <div class="card-citations"><i class="fas fa-quote-right"></i> 9 citations</div>
+                    <h3>Search Self-Play: Pushing the Frontier of Agent Capability without Supervision</h3>
+                    <p class="card-authors">H Lu, Y Wen, P Cheng, R Ding, J Guo, <strong>H Xu</strong>, C Wang, H Chen, X Jiang, et al.</p>
+                    <p class="card-desc">A novel self-play framework that advances agent capabilities through search without external supervision.</p>
+                </div>
+
+                <div class="highlight-card spotlight">
+                    <div class="card-badge">ICLR 2026</div>
+                    <div class="card-citations"><i class="fas fa-quote-right"></i></div>
+                    <h3>Uni-DPO: A Unified Paradigm for Dynamic Preference Optimization of LLMs</h3>
+                    <p class="card-authors">S Peng, W Wang, Z Tian, S Yang, X Wu, <strong>H Xu</strong>, C Zhang, T Isobe, B Hu, M Zhang</p>
+                    <p class="card-desc">A unified dynamic preference optimization framework that adaptively reweights samples by jointly considering data quality and model performance evolution during training.</p>
+                </div>
+
+                <div class="highlight-card spotlight">
+                    <div class="card-badge">IEEE TPAMI 2025</div>
+                    <div class="card-citations"><i class="fas fa-quote-right"></i> 386 citations</div>
+                    <h3>From System 1 to System 2: A Survey of Reasoning Large Language Models</h3>
+                    <p class="card-authors">D Zhang, ZZ Li, ML Zhang, J Zhang, Z Liu, Y Yao, <strong>H Xu</strong>, J Zheng, X Chen, et al.</p>
+                    <p class="card-desc">A comprehensive survey of reasoning LLMs, tracing the evolution from fast intuitive (System 1) to slow deliberate (System 2) reasoning paradigms.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="card-badge">EMNLP 2025</div>
+                    <div class="card-citations"><i class="fas fa-quote-right"></i> 304 citations</div>
+                    <h3>OpenRLHF: An Easy-to-use, Scalable and High-performance RLHF Framework</h3>
+                    <p class="card-authors">J Hu, X Wu, W Shen, JK Liu, W Wang, S Jiang, H Wang, H Chen, B Chen, <strong>H Xu</strong>, et al.</p>
+                    <p class="card-desc">A Ray-based open-source framework enabling scalable RLHF training, widely adopted by the research community.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="card-badge">ACL 2024</div>
+                    <div class="card-citations"><i class="fas fa-quote-right"></i> 14 citations</div>
+                    <h3>ITD: Large Language Models Can Teach Themselves Induction Through Deduction</h3>
+                    <p class="card-authors">W Sun, <strong>H Xu</strong>, X Yu, P Chen, S He, J Zhao, K Liu</p>
+                    <p class="card-desc">Showing that LLMs can bootstrap inductive reasoning capability through deductive self-teaching.</p>
+                </div>
+
+                <div class="highlight-card">
+                    <div class="card-badge">ACL 2026</div>
+                    <div class="card-citations"><i class="fas fa-quote-right"></i> 7 citations</div>
+                    <h3>TL;DR: Too Long, Do Re-weighting for Efficient LLM Reasoning Compression</h3>
+                    <p class="card-authors">ZZ Li, X Liang, Z Tang, L Ji, P Wang, <strong>H Xu</strong>, H Huang, W Deng, Y Gong, et al.</p>
+                    <p class="card-desc">An efficient method to compress long chain-of-thought reasoning while preserving accuracy.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Publications Section -->
+    <section class="section" id="publications">
+        <div class="container">
+            <h2 class="section-title">Selected Publications</h2>
+            <p class="section-subtitle">Full list on <a href="https://scholar.google.com/citations?user=WTocGYAAAAAJ&hl=en" target="_blank">Google Scholar</a></p>
+
+            <div class="pub-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="2025">2025+</button>
+                <button class="filter-btn" data-filter="top">Top Cited</button>
+            </div>
+
+            <div class="pub-list">
+
+                <div class="pub-item" data-year="2025" data-citations="386">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h4>From System 1 to System 2: A Survey of Reasoning Large Language Models</h4>
+                        <p class="pub-authors">D Zhang, ZZ Li, ML Zhang, J Zhang, Z Liu, Y Yao, <strong>H Xu</strong>, et al.</p>
+                        <span class="pub-venue">IEEE Transactions on Pattern Analysis and Machine Intelligence</span>
+                        <span class="pub-cite">386 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2025" data-citations="351">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h4>Reinforce++: Stabilizing Critic-free Policy Optimization with Global Advantage Normalization</h4>
+                        <p class="pub-authors">J Hu, JK Liu, <strong>H Xu</strong>, W Shen</p>
+                        <span class="pub-venue">arXiv preprint</span>
+                        <span class="pub-cite">351 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2025" data-citations="304">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h4>OpenRLHF: An Easy-to-use, Scalable and High-performance RLHF Framework</h4>
+                        <p class="pub-authors">J Hu, X Wu, W Shen, JK Liu, W Wang, S Jiang, H Wang, H Chen, B Chen, <strong>H Xu</strong>, et al.</p>
+                        <span class="pub-venue">EMNLP 2025</span>
+                        <span class="pub-cite">304 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2023" data-citations="104">
+                    <div class="pub-year">2023</div>
+                    <div class="pub-content">
+                        <h4>CValues: Measuring the Values of Chinese Large Language Models from Safety to Responsibility</h4>
+                        <p class="pub-authors">G Xu, J Liu, M Yan, <strong>H Xu</strong>, J Si, Z Zhou, P Yi, X Gao, J Sang, R Zhang, et al.</p>
+                        <span class="pub-venue">arXiv preprint</span>
+                        <span class="pub-cite">104 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2025" data-citations="63">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h4>RedStar: Does Scaling Long-CoT Data Unlock Better Slow-Reasoning Systems?</h4>
+                        <p class="pub-authors"><strong>H Xu</strong>, X Wu, W Wang, Z Li, D Zheng, B Chen, Y Hu, S Kang, J Ji, Y Zhang, et al.</p>
+                        <span class="pub-venue">arXiv preprint</span>
+                        <span class="pub-cite">63 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2024" data-citations="59">
+                    <div class="pub-year">2024</div>
+                    <div class="pub-content">
+                        <h4>Interpretable Contrastive Monte Carlo Tree Search Reasoning</h4>
+                        <p class="pub-authors">Z Gao, B Niu, X He, <strong>H Xu</strong>, H Liu, A Liu, X Hu, L Wen</p>
+                        <span class="pub-venue">arXiv preprint</span>
+                        <span class="pub-cite">59 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2025" data-citations="45">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h4>Agentic RL Scaling Law: Spontaneous Code Execution for Mathematical Problem Solving</h4>
+                        <p class="pub-authors">X Mai, <strong>H Xu</strong>, W Wang, Y Zhang, W Zhang</p>
+                        <span class="pub-venue">NeurIPS 2025</span>
+                        <span class="pub-cite">45 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2025" data-citations="27">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h4>Beyond Instruction Following: Evaluating Inferential Rule Following of Large Language Models</h4>
+                        <p class="pub-authors">W Sun, X Yu, Z Huang, <strong>H Xu</strong>, S He, J Zhao, K Liu</p>
+                        <span class="pub-venue">CCL 2025</span>
+                        <span class="pub-cite">27 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2023" data-citations="26">
+                    <div class="pub-year">2023</div>
+                    <div class="pub-content">
+                        <h4>No Train Still Gain. Unleash Mathematical Reasoning of LLMs with Monte Carlo Tree Search Guided by Energy Function</h4>
+                        <p class="pub-authors"><strong>H Xu</strong></p>
+                        <span class="pub-venue">arXiv preprint</span>
+                        <span class="pub-cite">26 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2022" data-citations="22">
+                    <div class="pub-year">2022</div>
+                    <div class="pub-content">
+                        <h4>Generating Disentangled Arguments with Prompts: A Simple Event Extraction Framework that Works</h4>
+                        <p class="pub-authors">J Si, X Peng, C Li, <strong>H Xu</strong>, J Li</p>
+                        <span class="pub-venue">ICASSP 2022</span>
+                        <span class="pub-cite">22 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2026" data-citations="17">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-content">
+                        <h4>IterResearch: Rethinking Long-Horizon Agents with Interaction Scaling</h4>
+                        <p class="pub-authors">G Chen, Z Qiao, X Chen, D Yu, <strong>H Xu</strong>, WX Zhao, R Song, W Yin, H Yin, et al.</p>
+                        <span class="pub-venue">ICLR 2026</span>
+                        <span class="pub-cite">17 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2024" data-citations="14">
+                    <div class="pub-year">2024</div>
+                    <div class="pub-content">
+                        <h4>ITD: Large Language Models Can Teach Themselves Induction Through Deduction</h4>
+                        <p class="pub-authors">W Sun, <strong>H Xu</strong>, X Yu, P Chen, S He, J Zhao, K Liu</p>
+                        <span class="pub-venue">ACL 2024</span>
+                        <span class="pub-cite">14 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2026" data-citations="11">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-content">
+                        <h4>GEM: A Gym for Generalist LLMs</h4>
+                        <p class="pub-authors">Z Liu, A Sims, K Duan, C Chen, S Yu, X Zhou, <strong>H Xu</strong>, S Xiong, B Liu, C Tan, et al.</p>
+                        <span class="pub-venue">ICLR 2026</span>
+                        <span class="pub-cite">11 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2026" data-citations="9">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-content">
+                        <h4>Search Self-Play: Pushing the Frontier of Agent Capability without Supervision</h4>
+                        <p class="pub-authors">H Lu, Y Wen, P Cheng, R Ding, J Guo, <strong>H Xu</strong>, C Wang, H Chen, X Jiang, et al.</p>
+                        <span class="pub-venue">ICLR 2026</span>
+                        <span class="pub-cite">9 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2026" data-citations="0">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-content">
+                        <h4>Uni-DPO: A Unified Paradigm for Dynamic Preference Optimization of LLMs</h4>
+                        <p class="pub-authors">S Peng, W Wang, Z Tian, S Yang, X Wu, <strong>H Xu</strong>, C Zhang, T Isobe, B Hu, M Zhang</p>
+                        <span class="pub-venue">ICLR 2026</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2025" data-citations="7">
+                    <div class="pub-year">2025</div>
+                    <div class="pub-content">
+                        <h4>Probabilistic Uncertain Reward Model</h4>
+                        <p class="pub-authors">W Sun, X Cheng, X Yu, <strong>H Xu</strong>, Z Yang, S He, J Zhao, K Liu</p>
+                        <span class="pub-venue">arXiv preprint</span>
+                        <span class="pub-cite">7 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2026" data-citations="7">
+                    <div class="pub-year">2026</div>
+                    <div class="pub-content">
+                        <h4>TL;DR: Too Long, Do Re-weighting for Efficient LLM Reasoning Compression</h4>
+                        <p class="pub-authors">ZZ Li, X Liang, Z Tang, L Ji, P Wang, <strong>H Xu</strong>, et al.</p>
+                        <span class="pub-venue">ACL 2026</span>
+                        <span class="pub-cite">7 citations</span>
+                    </div>
+                </div>
+
+                <div class="pub-item" data-year="2020" data-citations="45">
+                    <div class="pub-year">2020</div>
+                    <div class="pub-content">
+                        <h4>End-to-end Latent-variable Task-oriented Dialogue System with Exact Log-likelihood Optimization</h4>
+                        <p class="pub-authors"><strong>H Xu</strong>, H Peng, H Xie, E Cambria, L Zhou, W Zheng</p>
+                        <span class="pub-venue">World Wide Web 23(3)</span>
+                        <span class="pub-cite">45 citations</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Zhihu Section -->
+    <section class="section section-alt" id="zhihu">
+        <div class="container">
+            <h2 class="section-title"><i class="fab fa-zhihu"></i> Zhihu Contributions</h2>
+            <p class="section-subtitle">Technical writing on LLM reasoning, MCTS, and reinforcement learning</p>
+
+            <div class="zhihu-profile">
+                <div class="zhihu-info">
+                    <h3>haotian</h3>
+                    <p class="zhihu-bio">Research interests: Probabilistic Graphical Models, Reinforcement Learning, NLP</p>
+                    <div class="zhihu-stats">
+                        <span><i class="fas fa-thumbs-up"></i> 485+ Upvotes</span>
+                        <span><i class="fas fa-pen"></i> 8+ Answers</span>
+                    </div>
+                    <a href="https://www.zhihu.com/people/hao-tian-87/posts" target="_blank" class="btn btn-zhihu"><i class="fab fa-zhihu"></i> Visit my Zhihu Profile</a>
+                </div>
+            </div>
+
+            <div class="zhihu-articles">
+                <h3>Featured Articles</h3>
+                <div class="article-list">
+                    <a href="https://zhuanlan.zhihu.com/p/659230417" target="_blank" class="article-item hot">
+                        <div class="article-icon"><i class="fas fa-fire"></i></div>
+                        <div class="article-info">
+                            <h4>LLM的快思考与慢思考路线之MCTS</h4>
+                            <p>System 1 vs System 2 thinking paradigm with MCTS for LLM reasoning</p>
+                        </div>
+                        <i class="fas fa-arrow-right article-arrow"></i>
+                    </a>
+                    <a href="https://zhuanlan.zhihu.com/p/13872128423" target="_blank" class="article-item hot">
+                        <div class="article-icon"><i class="fas fa-fire"></i></div>
+                        <div class="article-info">
+                            <h4>o1复现的一点点心得</h4>
+                            <p>Insights on reproducing OpenAI o1 with long-CoT distillation and DPO</p>
+                        </div>
+                        <i class="fas fa-arrow-right article-arrow"></i>
+                    </a>
+                    <a href="https://zhuanlan.zhihu.com/p/23762300693" target="_blank" class="article-item hot">
+                        <div class="article-icon"><i class="fas fa-fire"></i></div>
+                        <div class="article-info">
+                            <h4>当RL的时候，我们到底在做啥</h4>
+                            <p>Reward shaping, domain randomization, and what zero-RL really optimizes</p>
+                        </div>
+                        <i class="fas fa-arrow-right article-arrow"></i>
+                    </a>
+                    <a href="https://zhuanlan.zhihu.com/p/31770741283" target="_blank" class="article-item">
+                        <div class="article-icon"><i class="fas fa-gem"></i></div>
+                        <div class="article-info">
+                            <h4>RL细节为王</h4>
+                            <p>Deep dive into RL implementation details: loss, gradient accumulation, GRPO variance</p>
+                        </div>
+                        <i class="fas fa-arrow-right article-arrow"></i>
+                    </a>
+                    <a href="https://www.zhihu.com/people/hao-tian-87/posts" target="_blank" class="article-item">
+                        <div class="article-icon"><i class="fas fa-gem"></i></div>
+                        <div class="article-info">
+                            <h4>删繁就简的LLM-RL</h4>
+                            <p>Simplifying LLM-RL: start minimal, add complexity only when needed</p>
+                        </div>
+                        <i class="fas fa-arrow-right article-arrow"></i>
+                    </a>
+                    <a href="https://zhuanlan.zhihu.com/p/1889286471078368477" target="_blank" class="article-item">
+                        <div class="article-icon"><i class="fas fa-gem"></i></div>
+                        <div class="article-info">
+                            <h4>ZERO-TIR-RL: 以小搏大</h4>
+                            <p>Zero-shot tool-integrated reasoning with RL &mdash; small models, big results</p>
+                        </div>
+                        <i class="fas fa-arrow-right article-arrow"></i>
+                    </a>
+                    <a href="https://zhuanlan.zhihu.com/p/1903425641954674326" target="_blank" class="article-item">
+                        <div class="article-icon"><i class="fas fa-gem"></i></div>
+                        <div class="article-info">
+                            <h4>Zero-TIR-Scale &amp; Async-Pipeline</h4>
+                            <p>Async rollout + pipeline: 4x faster training built on OpenRLHF</p>
+                        </div>
+                        <i class="fas fa-arrow-right article-arrow"></i>
+                    </a>
+                    <a href="https://zhuanlan.zhihu.com/p/1985351051990295949" target="_blank" class="article-item">
+                        <div class="article-icon"><i class="fas fa-gem"></i></div>
+                        <div class="article-info">
+                            <h4>初探MOE-RL训推一致性</h4>
+                            <p>Training-inference consistency for MoE models under RL</p>
+                        </div>
+                        <i class="fas fa-arrow-right article-arrow"></i>
+                    </a>
+                    <a href="https://www.zhihu.com/people/hao-tian-87/posts" target="_blank" class="article-item">
+                        <div class="article-icon"><i class="fas fa-gem"></i></div>
+                        <div class="article-info">
+                            <h4>staleness很大的时候，如何保证off-policy RL训练稳定性</h4>
+                            <p>Stabilizing off-policy RL training under high staleness</p>
+                        </div>
+                        <i class="fas fa-arrow-right article-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <div class="contact-grid">
+                <a href="mailto:htxu91@gmail.com" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>Email</span>
+                    <p>htxu91@gmail.com</p>
+                </a>
+                <a href="mailto:haotian.xu@miromind.ai" class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <span>Work Email</span>
+                    <p>haotian.xu@miromind.ai</p>
+                </a>
+                <a href="https://scholar.google.com/citations?user=WTocGYAAAAAJ&hl=en" target="_blank" class="contact-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>Google Scholar</span>
+                    <p>Publications & Citations</p>
+                </a>
+                <a href="https://www.zhihu.com/people/hao-tian-87/posts" target="_blank" class="contact-card">
+                    <i class="fab fa-zhihu"></i>
+                    <span>Zhihu</span>
+                    <p>haotian</p>
+                </a>
+                <a href="https://github.com/OpenRLHF" target="_blank" class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub</span>
+                    <p>OpenRLHF & Projects</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Haotian Xu. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
