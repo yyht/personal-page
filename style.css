@@ -917,7 +917,13 @@ a:hover {
     }
 
     .timeline-item {
-        grid-template-columns: 110px 1fr;
+        grid-template-columns: 1fr;
+        gap: 0.25rem;
+        padding-left: 0.5rem;
+    }
+
+    .timeline-date {
+        font-size: 0.75rem;
     }
 
     .highlights-grid {
