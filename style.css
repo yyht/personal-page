@@ -497,6 +497,126 @@ a:hover {
     color: var(--text-secondary);
 }
 
+/* ===== apodex-v1.0 ===== */
+.apodex-section {
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(ellipse 50% 45% at 15% 0%, rgba(99, 102, 241, 0.08), transparent),
+        radial-gradient(ellipse 45% 40% at 90% 100%, rgba(16, 185, 129, 0.06), transparent),
+        var(--bg-alt);
+}
+
+.apodex-header {
+    max-width: 760px;
+    margin-bottom: 2.5rem;
+}
+
+.apodex-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem 0.9rem;
+    background: var(--accent-glow);
+    color: var(--accent-light);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.apodex-section .section-title {
+    font-family: 'JetBrains Mono', monospace;
+    background: linear-gradient(90deg, var(--accent-light), var(--green));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.apodex-lead {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    margin-top: 0.75rem;
+}
+
+.apodex-lead strong {
+    color: var(--text);
+}
+
+.apodex-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+.apodex-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    transition: all var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.apodex-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(180deg, var(--accent), var(--green));
+    opacity: 0;
+    transition: opacity var(--transition);
+}
+
+.apodex-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(99, 102, 241, 0.12);
+}
+
+.apodex-card:hover::before {
+    opacity: 1;
+}
+
+.apodex-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--accent-glow);
+    color: var(--accent-light);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.apodex-card h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+}
+
+.apodex-card p {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.apodex-card em {
+    color: var(--accent-light);
+    font-style: normal;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85em;
+}
+
 /* ===== Highlights ===== */
 .highlights-grid {
     display: grid;
@@ -937,6 +1057,446 @@ a:hover {
 
     .contact-grid {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ===== Print / PDF Export ===== */
+@media print {
+    @page {
+        size: A4;
+        margin: 14mm 14mm;
+    }
+
+    *, *::before, *::after {
+        background: #fff !important;
+        color: #111 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
+    html, body {
+        background: #fff !important;
+        font-size: 10.5pt;
+        line-height: 1.45;
+    }
+
+    /* Hide navigation and non-essential chrome */
+    .navbar,
+    .scroll-indicator,
+    .nav-toggle,
+    .hero-bg,
+    .avatar-ring,
+    .hero-visual,
+    .pub-filters,
+    #downloadPdf,
+    .footer {
+        display: none !important;
+    }
+
+    /* Keep links readable but not colored all over */
+    a, a:visited {
+        color: #1a4fd6 !important;
+        text-decoration: none;
+    }
+
+    /* Show URLs for external links (optional; keep concise) */
+    .hero-links a[href^="http"]::after,
+    .contact-card[href^="http"]::after,
+    .article-item[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.75em;
+        color: #555 !important;
+        word-break: break-all;
+    }
+
+    /* Hero compaction */
+    .hero {
+        min-height: auto;
+        padding: 0 0 1rem;
+        display: block;
+    }
+
+    .hero-content {
+        display: block;
+    }
+
+    .hero-name {
+        font-size: 22pt;
+        margin-bottom: 0.25rem;
+    }
+
+    .hero-cn {
+        color: #555 !important;
+    }
+
+    .hero-greeting {
+        color: #555 !important;
+        letter-spacing: 0.5px;
+        margin-bottom: 0.25rem;
+    }
+
+    .hero-tagline,
+    .hero-affiliation {
+        font-size: 10.5pt;
+        margin-bottom: 0.3rem;
+    }
+
+    .hero-stats {
+        gap: 1.25rem;
+        margin: 0.5rem 0 0.75rem;
+    }
+
+    .stat-number {
+        font-size: 12pt;
+    }
+
+    .stat-label {
+        font-size: 7.5pt;
+    }
+
+    /* Buttons become simple text links in print */
+    .hero-links {
+        gap: 0.5rem 1rem;
+    }
+
+    .btn {
+        padding: 0;
+        border: none !important;
+        background: transparent !important;
+        color: #1a4fd6 !important;
+        font-weight: 500;
+    }
+
+    .btn i {
+        display: none;
+    }
+
+    /* Section layout */
+    .section {
+        padding: 0.75rem 0;
+        page-break-inside: auto;
+    }
+
+    .section-alt {
+        background: #fff !important;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    .section-title {
+        font-size: 14pt;
+        border-bottom: 1px solid #bbb;
+        padding-bottom: 0.25rem;
+        margin-bottom: 0.6rem;
+        page-break-after: avoid;
+    }
+
+    .section-subtitle {
+        font-size: 9.5pt;
+        margin-bottom: 0.75rem;
+        color: #555 !important;
+    }
+
+    /* About */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-text p {
+        font-size: 10.5pt;
+        color: #222 !important;
+    }
+
+    .interest-tags {
+        gap: 0.3rem;
+    }
+
+    .tag {
+        background: #eef1ff !important;
+        color: #2a3ab8 !important;
+        border: 1px solid #d0d6f5 !important;
+        padding: 0.15rem 0.55rem;
+        font-size: 9pt;
+    }
+
+    /* Timeline */
+    .timeline-title {
+        font-size: 11.5pt;
+        margin: 0.75rem 0 0.5rem;
+        page-break-after: avoid;
+    }
+
+    .timeline {
+        padding-left: 1rem;
+    }
+
+    .timeline::before {
+        background: #ccc !important;
+    }
+
+    .timeline-item {
+        grid-template-columns: 110px 1fr;
+        padding-bottom: 0.5rem;
+        page-break-inside: avoid;
+    }
+
+    .timeline-dot {
+        background: #1a4fd6 !important;
+        border-color: #1a4fd6 !important;
+        width: 10px;
+        height: 10px;
+        left: -1rem;
+        top: 6px;
+    }
+
+    .timeline-date {
+        color: #1a4fd6 !important;
+        font-size: 9pt;
+    }
+
+    .timeline-body h4 {
+        font-size: 10.5pt;
+    }
+
+    .timeline-body p {
+        font-size: 9.5pt;
+        color: #333 !important;
+    }
+
+    /* apodex-v1.0 */
+    .apodex-section .section-title {
+        -webkit-text-fill-color: #111 !important;
+        color: #111 !important;
+        font-family: inherit;
+    }
+
+    .apodex-eyebrow {
+        background: #eef1ff !important;
+        color: #2a3ab8 !important;
+        border: 1px solid #d0d6f5 !important;
+        padding: 0.1rem 0.5rem;
+        font-size: 8pt;
+        margin-bottom: 0.5rem;
+    }
+
+    .apodex-header {
+        margin-bottom: 0.75rem;
+    }
+
+    .apodex-lead {
+        font-size: 10pt;
+        color: #222 !important;
+    }
+
+    .apodex-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.6rem;
+    }
+
+    .apodex-card {
+        padding: 0.6rem 0.75rem;
+        border: 1px solid #ccc !important;
+        page-break-inside: avoid;
+    }
+
+    .apodex-card::before {
+        display: none;
+    }
+
+    .apodex-icon {
+        background: #eef1ff !important;
+        color: #2a3ab8 !important;
+        width: 26px;
+        height: 26px;
+        font-size: 10pt;
+        margin-bottom: 0.4rem;
+    }
+
+    .apodex-card h3 {
+        font-size: 9.5pt;
+    }
+
+    .apodex-card p {
+        font-size: 8.5pt;
+        color: #333 !important;
+    }
+
+    .apodex-card em {
+        color: #2a3ab8 !important;
+    }
+
+    /* Highlight cards */
+    .highlights-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.6rem;
+    }
+
+    .highlight-card {
+        padding: 0.6rem 0.75rem;
+        border: 1px solid #ccc !important;
+        page-break-inside: avoid;
+    }
+
+    .highlight-card::before {
+        display: none;
+    }
+
+    .highlight-card h3 {
+        font-size: 10pt;
+    }
+
+    .card-badge {
+        background: #eef1ff !important;
+        color: #2a3ab8 !important;
+        padding: 0.1rem 0.5rem;
+        font-size: 8pt;
+        margin-bottom: 0.3rem;
+    }
+
+    .highlight-card.spotlight .card-badge {
+        background: #fff5e0 !important;
+        color: #a86508 !important;
+    }
+
+    .card-citations {
+        font-size: 8.5pt;
+        color: #555 !important;
+    }
+
+    .card-authors,
+    .card-desc {
+        font-size: 9pt;
+        color: #333 !important;
+    }
+
+    /* Publications list */
+    .pub-list {
+        gap: 0.4rem;
+    }
+
+    .pub-item {
+        padding: 0.4rem 0.6rem;
+        border: 1px solid #ddd !important;
+        gap: 0.75rem;
+        page-break-inside: avoid;
+    }
+
+    .pub-year {
+        color: #1a4fd6 !important;
+        font-size: 9pt;
+        min-width: 34px;
+    }
+
+    .pub-content h4 {
+        font-size: 10pt;
+    }
+
+    .pub-authors {
+        font-size: 8.5pt;
+        color: #333 !important;
+    }
+
+    .pub-venue {
+        background: #eef1ff !important;
+        color: #2a3ab8 !important;
+        font-size: 8pt;
+    }
+
+    .pub-cite {
+        font-size: 8pt;
+        color: #555 !important;
+    }
+
+    /* Zhihu */
+    .zhihu-profile {
+        padding: 0.75rem;
+        border: 1px solid #ddd !important;
+        page-break-inside: avoid;
+    }
+
+    .article-item {
+        padding: 0.4rem 0.6rem;
+        border: 1px solid #eee !important;
+        page-break-inside: avoid;
+    }
+
+    .article-icon {
+        background: #eef1ff !important;
+        color: #2a3ab8 !important;
+        width: 26px;
+        height: 26px;
+        font-size: 9pt;
+    }
+
+    .article-item.hot .article-icon {
+        background: #fff5e0 !important;
+        color: #a86508 !important;
+    }
+
+    .article-info h4 {
+        font-size: 9.5pt;
+        white-space: normal;
+    }
+
+    .article-info p {
+        font-size: 8.5pt;
+        color: #444 !important;
+        white-space: normal;
+    }
+
+    .article-arrow {
+        display: none;
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    .contact-card {
+        padding: 0.6rem;
+        border: 1px solid #ddd !important;
+        page-break-inside: avoid;
+    }
+
+    .contact-card i {
+        font-size: 11pt;
+        margin-bottom: 0.25rem;
+        color: #1a4fd6 !important;
+    }
+
+    .contact-card span {
+        font-size: 9.5pt;
+    }
+
+    .contact-card p {
+        font-size: 8.5pt;
+        color: #555 !important;
+    }
+
+    /* Disable fade-in for print */
+    .fade-in {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    /* Break hints */
+    #highlights,
+    #publications,
+    #zhihu,
+    #contact {
+        page-break-before: auto;
+    }
+
+    h2, h3, h4 {
+        page-break-after: avoid;
     }
 }
 
