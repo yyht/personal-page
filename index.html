@@ -79,7 +79,7 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I currently work at <strong>Apodex</strong>, focusing on <strong>RL-Infra</strong> and <strong>RL algorithm</strong> development with a focus on <strong>Agentic-RL</strong>. I build <strong>apodex-v1.0</strong>, a fully-asynchronous Agentic-RL training system (on top of <strong>miles</strong>) that decouples training from rollout, evaluates without pausing training, and reclaims idle training GPUs for generation via hybrid-colocate. I also contributed the <strong>fully-async</strong> scheduling architecture to <strong>OpenRLHF</strong>, an open-source, Ray-based high-performance RLHF framework widely adopted by the community. My research spans LLM reasoning, MCTS, scaling laws for agentic reasoning, and efficient reasoning compression.</p>
+                    <p>I currently work at <strong>Apodex</strong>, focusing on <strong>RL-Infra</strong> and <strong>RL algorithm</strong> development with a focus on <strong>Agentic-RL</strong>. I built the <strong>RL training system</strong> behind <strong>apodex-v1.0</strong>, Apodex's flagship agentic model &mdash; a fully-asynchronous stack (on top of <strong>miles</strong>) that decouples training from rollout, evaluates without pausing training, and reclaims idle training GPUs for generation via hybrid-colocate. I also contributed the <strong>fully-async</strong> scheduling architecture to <strong>OpenRLHF</strong>, an open-source, Ray-based high-performance RLHF framework widely adopted by the community. My research spans LLM reasoning, MCTS, scaling laws for agentic reasoning, and efficient reasoning compression.</p>
                 </div>
                 <div class="about-interests">
                     <h3>Research Interests</h3>
@@ -160,9 +160,9 @@
     <section class="section apodex-section" id="apodex">
         <div class="container">
             <div class="apodex-header">
-                <span class="apodex-eyebrow"><i class="fas fa-microchip"></i> Featured System &middot; RL-Infra</span>
-                <h2 class="section-title">apodex-v1.0</h2>
-                <p class="apodex-lead">A fully-asynchronous, high-throughput <strong>Agentic-RL</strong> training system built on top of <strong>miles</strong>. It fully decouples training from rollout, evaluates the policy without ever pausing the training loop, and squeezes maximum utilization out of every GPU &mdash; letting training cards double as rollout engines whenever there is no data left to consume.</p>
+                <span class="apodex-eyebrow"><i class="fas fa-microchip"></i> Featured Work &middot; RL-Infra</span>
+                <h2 class="section-title">apodex-v1.0 &middot; RL Training System</h2>
+                <p class="apodex-lead"><strong>apodex-v1.0</strong> is Apodex's flagship agentic model. My main contribution is its <strong>RL training system</strong> &mdash; a fully-asynchronous, high-throughput Agentic-RL stack built on top of <strong>miles</strong> that fully decouples training from rollout, evaluates the policy without ever pausing the training loop, and squeezes maximum utilization out of every GPU by letting idle training cards double as rollout engines whenever there is no data left to consume.</p>
             </div>
 
             <div class="apodex-grid">
@@ -199,7 +199,7 @@
                     <div class="card-citations"><i class="fas fa-quote-right"></i> 6 citations</div>
                     <h3>MiroThinker: Towards Heavy-Duty Research Agents via Verification &amp; Model-Context Scaling</h3>
                     <p class="card-authors">MiroMind Team (incl. <strong>H Xu</strong>)</p>
-                    <p class="card-desc">A family of open research agents (MiroThinker-1.7 &amp; h1) that scale long-horizon, verification-centric reasoning &mdash; the model line trained with the apodex-v1.0 RL stack.</p>
+                    <p class="card-desc">A family of open research agents (MiroThinker-1.7 &amp; h1) that scale long-horizon, verification-centric reasoning, trained with our fully-asynchronous RL stack.</p>
                 </div>
 
                 <div class="highlight-card spotlight">
