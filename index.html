@@ -20,7 +20,7 @@
             </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
-                <li><a href="#apodex">apodex-v1.0</a></li>
+                <li><a href="#apodex">Apodex-RL</a></li>
                 <li><a href="#highlights">Highlights</a></li>
                 <li><a href="#publications">Publications</a></li>
                 <li><a href="#zhihu">Zhihu</a></li>
@@ -79,7 +79,7 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I currently work at <strong>Apodex</strong>, focusing on <strong>RL-Infra</strong> and <strong>RL algorithm</strong> development with a focus on <strong>Agentic-RL</strong>. I built the <strong>RL training system</strong> behind <strong>apodex-v1.0</strong>, Apodex's flagship agentic model &mdash; a fully-asynchronous stack (on top of <strong>miles</strong>) that decouples training from rollout, evaluates without pausing training, and reclaims idle training GPUs for generation via hybrid-colocate. I also built <a href="https://github.com/yyht/openrlhf_async_pipline" target="_blank"><strong>async_openrlhf</strong></a>, an open-source, Ray-based high-performance RLHF framework with a <strong>fully-async</strong> training/rollout pipeline, extending the widely-adopted OpenRLHF. My research spans LLM reasoning, MCTS, scaling laws for agentic reasoning, and efficient reasoning compression.</p>
+                    <p>I currently work at <strong>Apodex</strong>, focusing on <strong>RL-Infra</strong> and <strong>RL algorithm</strong> development with a focus on <strong>Agentic-RL</strong>. I built the self-developed <strong>RL training framework</strong> (<a href="https://github.com/yyht/miles-values" target="_blank">miles-values</a>) behind <strong>apodex-v1.0</strong> and <strong>apodex-v1.1</strong>, Apodex's flagship agentic models &mdash; a fully-asynchronous stack that decouples training from rollout, evaluates without pausing training, and reclaims idle training GPUs for generation via hybrid-colocate. I also built <a href="https://github.com/yyht/openrlhf_async_pipline" target="_blank"><strong>async_openrlhf</strong></a>, an open-source, Ray-based high-performance RLHF framework with a <strong>fully-async</strong> training/rollout pipeline, extending the widely-adopted OpenRLHF. My research spans LLM reasoning, MCTS, scaling laws for agentic reasoning, and efficient reasoning compression.</p>
                 </div>
                 <div class="about-interests">
                     <h3>Research Interests</h3>
@@ -156,13 +156,13 @@
         </div>
     </section>
 
-    <!-- apodex-v1.0 Section -->
+    <!-- apodex RL Training System Section -->
     <section class="section apodex-section" id="apodex">
         <div class="container">
             <div class="apodex-header">
                 <span class="apodex-eyebrow"><i class="fas fa-microchip"></i> Featured Work &middot; RL-Infra</span>
-                <h2 class="section-title">apodex-v1.0 &middot; RL Training System</h2>
-                <p class="apodex-lead"><strong>apodex-v1.0</strong> is Apodex's flagship agentic model. My main contribution is its <strong>RL training system</strong> &mdash; a fully-asynchronous, high-throughput Agentic-RL stack built on top of <strong>miles</strong> that fully decouples training from rollout, evaluates the policy without ever pausing the training loop, and squeezes maximum utilization out of every GPU by letting idle training cards double as rollout engines whenever there is no data left to consume.</p>
+                <h2 class="section-title">apodex-v1.0 &amp; v1.1 &middot; RL Training System</h2>
+                <p class="apodex-lead"><strong>apodex-v1.0</strong> and <strong>apodex-v1.1</strong> are Apodex's flagship agentic models. Both are trained with the same <strong>self-developed RL framework</strong> I built from the ground up &mdash; <a href="https://github.com/yyht/miles-values" target="_blank"><strong>miles-values</strong></a> &mdash; a fully-asynchronous, high-throughput Agentic-RL stack that fully decouples training from rollout, evaluates the policy without ever pausing the training loop, and squeezes maximum utilization out of every GPU by letting idle training cards double as rollout engines whenever there is no data left to consume.</p>
             </div>
 
             <div class="apodex-grid">
@@ -644,6 +644,30 @@
                         </div>
                         <i class="fas fa-arrow-right article-arrow"></i>
                     </a>
+                    <a href="https://zhuanlan.zhihu.com/p/2064452938018322060" target="_blank" class="article-item">
+                        <div class="article-icon"><i class="fas fa-gem"></i></div>
+                        <div class="article-info">
+                            <h4>SAO（上篇）</h4>
+                            <p>Self-play / RL method deep-dive &mdash; part 1</p>
+                        </div>
+                        <i class="fas fa-arrow-right article-arrow"></i>
+                    </a>
+                    <a href="https://zhuanlan.zhihu.com/p/2064646116927344943" target="_blank" class="article-item">
+                        <div class="article-icon"><i class="fas fa-gem"></i></div>
+                        <div class="article-info">
+                            <h4>SAO（下篇）</h4>
+                            <p>Self-play / RL method deep-dive &mdash; part 2</p>
+                        </div>
+                        <i class="fas fa-arrow-right article-arrow"></i>
+                    </a>
+                    <a href="https://zhuanlan.zhihu.com/p/2066503866091410176" target="_blank" class="article-item">
+                        <div class="article-icon"><i class="fas fa-gem"></i></div>
+                        <div class="article-info">
+                            <h4>Value-Pretrain</h4>
+                            <p>Pretraining the value model to warm-start RL</p>
+                        </div>
+                        <i class="fas fa-arrow-right article-arrow"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -678,6 +702,11 @@
                     <i class="fab fa-github"></i>
                     <span>GitHub</span>
                     <p>async_openrlhf & Projects</p>
+                </a>
+                <a href="https://github.com/yyht/miles-values" target="_blank" class="contact-card">
+                    <i class="fas fa-code-branch"></i>
+                    <span>RL Framework</span>
+                    <p>miles-values</p>
                 </a>
             </div>
         </div>
