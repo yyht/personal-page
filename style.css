@@ -658,6 +658,102 @@ a:hover {
     font-size: 0.85em;
 }
 
+/* apodex eval curves */
+.apodex-curves {
+    margin-top: 2.5rem;
+}
+
+.apodex-curves-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+}
+
+.curves-run {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--accent-light);
+    background: var(--accent-glow);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    padding: 0.15rem 0.6rem;
+    border-radius: 6px;
+}
+
+.apodex-curves-sub {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.curves-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+
+.curve-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1rem 1rem 0.75rem;
+    transition: border-color var(--transition);
+}
+
+.curve-card:hover {
+    border-color: var(--accent);
+}
+
+.curve-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.3px;
+}
+
+.curve-svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.curve-grid,
+.curve-axis {
+    stroke: var(--border);
+    stroke-width: 1;
+}
+
+.curve-ylabel,
+.curve-xlabel,
+.curve-axistitle {
+    fill: var(--text-secondary);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+}
+
+.curve-axistitle {
+    font-size: 9px;
+    fill: #6b6b80;
+}
+
+.curve-raw {
+    fill: none;
+    stroke: var(--accent-light);
+    stroke-width: 1.5;
+    stroke-opacity: 0.32;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.curve-smooth {
+    fill: none;
+    stroke: var(--accent-light);
+    stroke-width: 2.2;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
 /* ===== Highlights ===== */
 .highlights-grid {
     display: grid;
@@ -1388,6 +1484,61 @@ a:hover {
 
     .apodex-card em {
         color: #2a3ab8 !important;
+    }
+
+    .apodex-curves {
+        margin-top: 0.75rem;
+        page-break-inside: avoid;
+    }
+
+    .apodex-curves-title {
+        font-size: 10pt;
+    }
+
+    .curves-run {
+        background: #eef1ff !important;
+        color: #2a3ab8 !important;
+        border: 1px solid #d0d6f5 !important;
+    }
+
+    .apodex-curves-sub {
+        font-size: 8.5pt;
+        color: #555 !important;
+    }
+
+    .curves-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+    }
+
+    .curve-card {
+        border: 1px solid #ccc !important;
+        padding: 0.4rem;
+        page-break-inside: avoid;
+    }
+
+    .curve-title {
+        font-size: 8.5pt;
+    }
+
+    .curve-grid,
+    .curve-axis {
+        stroke: #ccc !important;
+    }
+
+    .curve-ylabel,
+    .curve-xlabel,
+    .curve-axistitle {
+        fill: #555 !important;
+    }
+
+    .curve-raw {
+        stroke: #9aa4e8 !important;
+        stroke-opacity: 0.6;
+    }
+
+    .curve-smooth {
+        stroke: #1a4fd6 !important;
     }
 
     /* Highlight cards */
