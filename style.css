@@ -492,6 +492,12 @@ a:hover {
     margin-bottom: 0.2rem;
 }
 
+.timeline-note {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
 .timeline-body p {
     font-size: 0.9rem;
     color: var(--text-secondary);
