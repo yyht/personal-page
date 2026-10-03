@@ -112,24 +112,19 @@ const statsObserver = new IntersectionObserver((entries) => {
 const heroStats = document.querySelector('.hero-stats');
 if (heroStats) statsObserver.observe(heroStats);
 
-// Export to PDF via native print dialog
-const downloadPdfBtn = document.getElementById('downloadPdf');
-if (downloadPdfBtn) {
-    downloadPdfBtn.addEventListener('click', () => {
-        // Reveal any filter-hidden pubs so the PDF is complete
-        const hiddenPubs = document.querySelectorAll('.pub-item.hidden');
-        hiddenPubs.forEach(el => el.classList.add('print-restore'));
-        hiddenPubs.forEach(el => el.classList.remove('hidden'));
-
-        const restore = () => {
-            document.querySelectorAll('.pub-item.print-restore').forEach(el => {
-                el.classList.add('hidden');
-                el.classList.remove('print-restore');
-            });
-            window.removeEventListener('afterprint', restore);
-        };
-        window.addEventListener('afterprint', restore);
-
-        window.print();
+// "Download PDF" is a direct link to the generated resume (see #downloadPdf in
+// index.html), so no click handler is needed. Printing the page by hand should
+// still include publications hidden by the active filter.
+window.addEventListener('beforeprint', () => {
+    document.querySelectorAll('.pub-item.hidden').forEach(el => {
+        el.classList.add('print-restore');
+        el.classList.remove('hidden');
     });
-}
+});
+
+window.addEventListener('afterprint', () => {
+    document.querySelectorAll('.pub-item.print-restore').forEach(el => {
+        el.classList.add('hidden');
+        el.classList.remove('print-restore');
+    });
+});
